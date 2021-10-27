@@ -1,14 +1,11 @@
 function AddButton(props) {
     return (
-        <div>
-            <button
-                onClick={() =>
-                    props.setNumberOfPieces((prevCount) => prevCount + 1)
-                }
-            >
-                add
-            </button>
-        </div>
+        <div
+            className="add-btn"
+            onClick={() =>
+                props.setNumberOfPieces((prevCount) => prevCount + 1)
+            }
+        ></div>
     );
 }
 

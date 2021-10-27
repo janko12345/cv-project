@@ -1,6 +1,6 @@
 function InfoHeader(props) {
     return (
-        <div>
+        <div className="profile-info-header">
             <p>{props.name}</p>
         </div>
     );

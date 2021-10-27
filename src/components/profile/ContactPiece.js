@@ -3,7 +3,7 @@ import { useState } from "react";
 function ContactPiece(props) {
     const [value, setValue] = useState("");
     return (
-        <div>
+        <div className="contact-piece">
             <label htmlFor={props.name}>{props.name}:</label>
             <input
                 type={props.type}

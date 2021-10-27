@@ -1,6 +1,6 @@
 function HobbyPiece() {
     return (
-        <div>
+        <div className="hobby-piece">
             <input type="text" />
         </div>
     );

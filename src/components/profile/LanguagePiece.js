@@ -1,13 +1,12 @@
 function LanguagePiece() {
     return (
-        <div>
-            <div>
-                <input type="text" placeholder="name" />
-            </div>
-            -
-            <div>
-                <input type="text" placeholder="level" />
-            </div>
+        <div
+            className="language-piece"
+            onClick={() => console.log("clicked language piece")}
+        >
+            <input type="text" placeholder="name" />
+            <span>-</span>
+            <input type="text" placeholder="level" />
         </div>
     );
 }

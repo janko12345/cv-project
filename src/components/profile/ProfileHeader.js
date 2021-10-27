@@ -4,7 +4,7 @@ function ProfileHeader() {
             <div className="fullname">
                 <input type="text" name="fullname" placeholder="full name" />
             </div>
-            <div className="profile-picture"></div>
+            <img className="user-pic" src="/user.png" alt="user picture" />
         </div>
     );
 }
