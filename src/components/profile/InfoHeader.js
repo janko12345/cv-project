@@ -1,8 +1,7 @@
 function InfoHeader(props) {
-    console.log(props);
     return (
         <div>
-            <p></p>
+            <p>{props.name}</p>
         </div>
     );
 }

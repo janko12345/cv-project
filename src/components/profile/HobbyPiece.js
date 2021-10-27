@@ -1,5 +1,9 @@
 function HobbyPiece() {
-    return <div></div>;
+    return (
+        <div>
+            <input type="text" />
+        </div>
+    );
 }
 
 export default HobbyPiece;

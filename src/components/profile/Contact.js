@@ -5,9 +5,9 @@ function Contact() {
         <div>
             <div className="profile-section">
                 <InfoHeader name="contact" />
-                <ContactPiece />
-                <ContactPiece />
-                <ContactPiece />
+                <ContactPiece name="address" />
+                <ContactPiece name="phone" type="tel" />
+                <ContactPiece name="email" type="email" />
             </div>
         </div>
     );
