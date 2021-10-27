@@ -4,7 +4,7 @@ import InfoHeader from "./InfoHeader";
 function Education() {
     return (
         <div className="main-section">
-            <InfoHeader />
+            <InfoHeader name="Education" />
             <EducationPiece />
             <AddButton />
         </div>

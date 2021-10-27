@@ -3,9 +3,7 @@ function AddButton(props) {
         <div>
             <button
                 onClick={() =>
-                    props.setNumberOfPieces(
-                        (prevCount) => (console.log(prevCount), prevCount + 1)
-                    )
+                    props.setNumberOfPieces((prevCount) => prevCount + 1)
                 }
             >
                 add

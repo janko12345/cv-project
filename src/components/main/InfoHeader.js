@@ -1,5 +1,9 @@
-function InfoHeader() {
-    return <div></div>;
+function InfoHeader(props) {
+    return (
+        <div>
+            <p>{props.name}</p>
+        </div>
+    );
 }
 
 export default InfoHeader;

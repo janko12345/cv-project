@@ -4,7 +4,7 @@ import InfoHeader from "./InfoHeader";
 function Experience() {
     return (
         <div className="main-section">
-            <InfoHeader />
+            <InfoHeader name="Experience" />
             <ExperiencePiece />
             <AddButton />
         </div>
