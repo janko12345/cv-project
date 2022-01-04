@@ -4,7 +4,7 @@ import Main from "./Main";
 function Cv() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     function handleSubmit() {
-        setIsSubmitted(true);
+        setIsSubmitted(!isSubmitted);
     }
     return (
         <div className="cv">

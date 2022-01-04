@@ -6,7 +6,11 @@ function About({ isSubmitted }) {
     return (
         <div className="main-section">
             <InfoHeader name="About" />
-            <textarea cols="30" rows="4" value={value} onChange={(e) => setValue(e.target.value)}></textarea>
+            {isSubmitted ? (
+                <p style={value ? "" : { marginBottom: "4em" }}>{value}</p>
+            ) : (
+                <textarea cols="30" rows="4" value={value} onChange={(e) => setValue(e.target.value)}></textarea>
+            )}
         </div>
     );
 }

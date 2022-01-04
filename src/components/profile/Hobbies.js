@@ -10,7 +10,7 @@ function Hobbies({ isSubmitted }) {
             {[...new Array(numberOfPieces)].map((el, i) => (
                 <HobbyPiece isSubmitted={isSubmitted} key={i} />
             ))}
-            <AddButton setNumberOfPieces={setNumberOfPieces} />
+            <AddButton isSubmitted={isSubmitted} setNumberOfPieces={setNumberOfPieces} />
         </div>
     );
 }

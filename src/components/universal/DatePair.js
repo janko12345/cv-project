@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function DatePair() {
+function DatePair({ isSubmitted }) {
     const [values, setValues] = useState({ from: "", to: "" });
     let allowedChars = /^$|[-.\d]$/;
     let allowedFromats = {
@@ -11,32 +11,40 @@ function DatePair() {
 
     return (
         <div className="date-pair">
-            <input
-                type="text"
-                value={values.from}
-                placeholder="from"
-                onChange={(e) => {
-                    if (allowedChars.test(e.target.value))
-                        setValues({
-                            ...values,
-                            from: e.target.value,
-                        });
-                }}
-                onBlur={() => console.log("blurred")}
-            />
-            -
-            <input
-                type="text"
-                value={values.to}
-                placeholder="to"
-                onChange={(e) => {
-                    if (allowedChars.test(e.target.value))
-                        setValues({
-                            ...values,
-                            to: e.target.value,
-                        });
-                }}
-            />
+            {isSubmitted ? (
+                <>
+                    <span>{values.from}</span> <span>-</span> <span>{values.to}</span>
+                </>
+            ) : (
+                <>
+                    <input
+                        type="text"
+                        value={values.from}
+                        placeholder="from"
+                        onChange={(e) => {
+                            if (allowedChars.test(e.target.value))
+                                setValues({
+                                    ...values,
+                                    from: e.target.value,
+                                });
+                        }}
+                        onBlur={() => console.log("blurred")}
+                    />
+                    -
+                    <input
+                        type="text"
+                        value={values.to}
+                        placeholder="to"
+                        onChange={(e) => {
+                            if (allowedChars.test(e.target.value))
+                                setValues({
+                                    ...values,
+                                    to: e.target.value,
+                                });
+                        }}
+                    />
+                </>
+            )}
         </div>
     );
 }

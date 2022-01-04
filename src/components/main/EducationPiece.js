@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DatePair from "../universal/DatePair";
 
-function EducationPiece() {
+function EducationPiece({ isSubmitted }) {
     const [values, setValues] = useState({
         date: { from: "", to: "" },
         school: "",
@@ -9,26 +9,30 @@ function EducationPiece() {
     });
     return (
         <div className="education-piece">
-            <DatePair />
+            <DatePair isSubmitted={isSubmitted} />
             <div>
-                <input
-                    type="text"
-                    placeholder="School"
-                    value={values.school}
-                    onChange={(e) =>
-                        setValues({ ...values, school: e.target.value })
-                    }
-                />
+                {isSubmitted ? (
+                    <span>{values.titleOfStudy + ":"}</span>
+                ) : (
+                    <input
+                        type="text"
+                        placeholder="School"
+                        value={values.school}
+                        onChange={(e) => setValues({ ...values, school: e.target.value })}
+                    />
+                )}
             </div>
             <div>
-                <input
-                    type="text"
-                    placeholder="Title of study"
-                    value={values.titleOfStudy}
-                    onChange={(e) =>
-                        setValues({ ...values, titleOfStudy: e.target.value })
-                    }
-                />
+                {isSubmitted ? (
+                    <span>{values.school}</span>
+                ) : (
+                    <input
+                        type="text"
+                        placeholder="Title of study"
+                        value={values.titleOfStudy}
+                        onChange={(e) => setValues({ ...values, titleOfStudy: e.target.value })}
+                    />
+                )}
             </div>
         </div>
     );

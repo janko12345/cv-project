@@ -5,7 +5,11 @@ function ContactPiece({ name, type, isSubmitted }) {
     return (
         <div className="contact-piece">
             <label htmlFor={name}>{name}:</label>
-            <input type={type} id={name} value={value} onChange={(e) => setValue(e.target.value)} />
+            {isSubmitted ? (
+                <p>{value || "not specified"}</p>
+            ) : (
+                <input type={type} id={name} value={value} onChange={(e) => setValue(e.target.value)} />
+            )}
         </div>
     );
 }

@@ -10,7 +10,7 @@ function MainInfo({ isSubmitted, handleSubmit }) {
             <Education isSubmitted={isSubmitted} />
             <Experience isSubmitted={isSubmitted} />
             <Certifications isSubmitted={isSubmitted} />
-            <Submit handleSubmit={handleSubmit} />
+            <Submit isSubmitted={isSubmitted} handleSubmit={handleSubmit} />
         </div>
     );
 }

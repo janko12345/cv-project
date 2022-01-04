@@ -10,7 +10,7 @@ function Languages({ isSubmitted }) {
             {[...new Array(numberOfPieces)].map((el, i) => (
                 <LanguagePiece isSubmitted={isSubmitted} key={i} />
             ))}
-            <AddButton setNumberOfPieces={setNumberOfPieces} />
+            <AddButton isSubmitted={isSubmitted} setNumberOfPieces={setNumberOfPieces} />
         </div>
     );
 }

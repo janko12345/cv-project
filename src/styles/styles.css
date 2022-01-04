@@ -274,7 +274,7 @@ textarea::-webkit-scrollbar {
   min-width: 30%;
 }
 
-.experience-piece textarea {
+.experience-piece .job-tasks {
   max-width: 32.5%;
   margin-left: auto;
 }
