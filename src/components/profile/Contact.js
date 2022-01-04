@@ -1,12 +1,12 @@
 import ContactPiece from "./ContactPiece";
 import InfoHeader from "./InfoHeader";
-function Contact() {
+function Contact({ isSubmitted }) {
     return (
         <div className="profile-section">
             <InfoHeader name="Contact" />
-            <ContactPiece name="address" />
-            <ContactPiece name="phone" type="tel" />
-            <ContactPiece name="email" type="email" />
+            <ContactPiece isSubmitted={isSubmitted} name="address" />
+            <ContactPiece isSubmitted={isSubmitted} name="phone" type="tel" />
+            <ContactPiece isSubmitted={isSubmitted} name="email" type="email" />
         </div>
     );
 }

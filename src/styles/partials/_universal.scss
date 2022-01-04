@@ -1,0 +1,28 @@
+.add-btn {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #222;
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        width: 2px;
+        height: 10px;
+        background-color: #9ef16b;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+.date-pair {
+    display: flex;
+    gap: 0.22em;
+}

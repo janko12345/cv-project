@@ -1,16 +1,11 @@
 import { useState } from "react";
 
-function ContactPiece(props) {
+function ContactPiece({ name, type, isSubmitted }) {
     const [value, setValue] = useState("");
     return (
         <div className="contact-piece">
-            <label htmlFor={props.name}>{props.name}:</label>
-            <input
-                type={props.type}
-                id={props.name}
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-            />
+            <label htmlFor={name}>{name}:</label>
+            <input type={type} id={name} value={value} onChange={(e) => setValue(e.target.value)} />
         </div>
     );
 }

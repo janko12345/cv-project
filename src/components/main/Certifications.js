@@ -8,7 +8,7 @@ function Certifications() {
             <InfoHeader name="Certifications" />
             <textarea
                 cols="30"
-                rows="10"
+                rows="4"
                 style={{ resize: "none" }}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}

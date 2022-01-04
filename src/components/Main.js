@@ -2,13 +2,15 @@ import About from "./main/About";
 import Education from "./main/Education";
 import Experience from "./main/Experience";
 import Certifications from "./main/Certifications";
-function MainInfo() {
+import Submit from "./main/Submit";
+function MainInfo({ isSubmitted, handleSubmit }) {
     return (
         <div className="main">
-            <About />
-            <Education />
-            <Experience />
-            <Certifications />
+            <About isSubmitted={isSubmitted} />
+            <Education isSubmitted={isSubmitted} />
+            <Experience isSubmitted={isSubmitted} />
+            <Certifications isSubmitted={isSubmitted} />
+            <Submit handleSubmit={handleSubmit} />
         </div>
     );
 }

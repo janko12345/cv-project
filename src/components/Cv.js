@@ -1,10 +1,15 @@
+import { useState } from "react";
 import Profile from "./Profile";
 import Main from "./Main";
 function Cv() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    function handleSubmit() {
+        setIsSubmitted(true);
+    }
     return (
         <div className="cv">
-            <Profile />
-            <Main />
+            <Profile isSubmitted={isSubmitted} />
+            <Main isSubmitted={isSubmitted} handleSubmit={handleSubmit} />
         </div>
     );
 }
